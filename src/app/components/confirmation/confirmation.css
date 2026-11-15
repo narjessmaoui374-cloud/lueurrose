@@ -1,0 +1,115 @@
+.confirmation-page {
+  min-height: calc(100vh - 80px);
+  background: linear-gradient(135deg, #ffe0f0 0%, #ffd5e8 100%);
+  display: flex;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.confirmation-card {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.success-icon {
+  font-size: 5rem;
+  color: #17d9a7;
+  margin-bottom: 1.5rem;
+  animation: scaleIn 0.5s ease;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.confirmation-title {
+  color: #17d9a7;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.order-number {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.order-number strong {
+  color: #e91e8c;
+  font-size: 1.3rem;
+}
+
+.next-steps {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.next-steps h3 {
+  color: #e91e8c;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.next-steps ul {
+  list-style: none;
+  padding: 0;
+}
+
+.next-steps li {
+  padding: 1rem 0;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.next-steps li:last-child {
+  border-bottom: none;
+}
+
+.next-steps li i {
+  font-size: 1.5rem;
+  color: #e91e8c;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.action-buttons .btn {
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #e91e8c 0%, #ff69b4 100%);
+  border: none;
+}
+
+.btn-outline-primary {
+  border: 2px solid #e91e8c;
+  color: #e91e8c;
+}
+
+.btn-outline-primary:hover {
+  background: #e91e8c;
+  color: white;
+}

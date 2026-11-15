@@ -1,0 +1,73 @@
+<nav class="navbar navbar-expand-lg navbar-custom">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand" routerLink="/">
+      <i class="bi bi-flower1 me-2"></i>
+      <span class="brand-name">LueurRose</span>
+    </a>
+
+    <!-- Toggle button pour mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            Accueil
+          </a>
+        </li>
+
+        
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Occasions
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/occasion/Mariage"> Mariage</a></li>
+            <li><a class="dropdown-item" routerLink="/occasion/Anniversaire"> Anniversaire</a></li>
+            <li><a class="dropdown-item" routerLink="/occasion/Naissance"> Naissance</a></li>
+            <li><a class="dropdown-item" routerLink="/occasion/Deuil"> Deuil</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Menu utilisateur -->
+      <ul class="navbar-nav">
+        <ng-container *ngIf="currentUser; else loginLinks">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              <i class="bi bi-person-circle"></i> {{currentUser.username}}
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" (click)="logout()"><i class="bi bi-box-arrow-right"></i> Déconnexion</a></li>
+            </ul>
+          </li>
+        </ng-container>
+        <ng-template #loginLinks>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/login">Connexion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/register">Inscription</a>
+          </li>
+        </ng-template>
+
+        <!-- Panier -->
+        <li class="nav-item">
+          <a class="nav-link cart-link" routerLink="/cart">
+            <i class="bi bi-cart3"></i>
+            <span class="badge bg-danger" *ngIf="cartItemsCount > 0">{{cartItemsCount}}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

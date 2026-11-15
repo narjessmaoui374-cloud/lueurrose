@@ -1,0 +1,95 @@
+<div class="auth-page">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="auth-card">
+          <!-- Logo/Titre -->
+          <div class="text-center mb-4">
+            <i class="bi bi-flower1 auth-icon"></i>
+            <h2 class="auth-title">Créer un compte</h2>
+          </div>
+
+          <!-- Formulaire -->
+          <form (ngSubmit)="onSubmit()">
+            <!-- Nom d'utilisateur -->
+            <div class="mb-3">
+              <label class="form-label">Nom d'utilisateur *</label>
+              <input 
+                type="text" 
+                class="form-control" 
+                [(ngModel)]="username" 
+                name="username"
+                placeholder="Votre nom"
+                required>
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+              <label class="form-label">Email *</label>
+              <input 
+                type="email" 
+                class="form-control" 
+                [(ngModel)]="email" 
+                name="email"
+                placeholder="votre@email.com"
+                required>
+            </div>
+
+            <!-- Mot de passe -->
+            <div class="mb-3">
+              <label class="form-label">Mot de passe * <small>(min 6 caractères)</small></label>
+              <input 
+                type="password" 
+                class="form-control" 
+                [(ngModel)]="password" 
+                name="password"
+                placeholder="••••••••"
+                required>
+            </div>
+
+            <!-- Confirmer mot de passe -->
+            <div class="mb-3">
+              <label class="form-label">Confirmer le mot de passe *</label>
+              <input 
+                type="password" 
+                class="form-control" 
+                [(ngModel)]="confirmPassword" 
+                name="confirmPassword"
+                placeholder="••••••••"
+                required>
+            </div>
+
+            <!-- Messages -->
+            <div class="alert alert-danger" *ngIf="errorMessage">
+              <i class="bi bi-exclamation-triangle"></i> {{errorMessage}}
+            </div>
+
+            <div class="alert alert-success" *ngIf="successMessage">
+              <i class="bi bi-check-circle"></i> {{successMessage}}
+            </div>
+
+            <!-- Bouton -->
+            <button 
+              type="submit" 
+              class="btn btn-primary w-100 btn-submit"
+              [disabled]="isLoading">
+              <span *ngIf="!isLoading">S'inscrire</span>
+              <span *ngIf="isLoading">
+                <span class="spinner-border spinner-border-sm me-2"></span>
+                Inscription...
+              </span>
+            </button>
+          </form>
+
+          <!-- Lien connexion -->
+          <div class="text-center mt-4">
+            <p class="text-muted">
+              Déjà inscrit ? 
+              <a routerLink="/login" class="link-primary">Se connecter</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

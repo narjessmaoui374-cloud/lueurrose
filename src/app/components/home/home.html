@@ -1,0 +1,40 @@
+<div class="container my-5">
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <i class="bi bi-flower1"></i> Bienvenue chez LueurRose
+      </h1>
+      <p class="hero-subtitle">
+        Découvrez nos magnifiques compositions florales pour toutes vos occasions
+      </p>
+    </div>
+  </div>
+
+  <!-- Sections par occasion -->
+  <div *ngFor="let occasion of occasions" class="occasion-section">
+    <h2 class="occasion-title">
+      {{occasion}} <span class="occasion-badge">(occasion)</span>
+    </h2>
+
+    <div class="row g-4">
+      <div class="col-md-4" *ngFor="let product of occasionProducts[occasion]">
+        <div class="product-card">
+          <div class="product-image-wrapper">
+            <img [src]="product.image" [alt]="product.name" class="product-image">
+          </div>
+          <div class="product-body">
+            <h3 class="product-name">{{product.name}}</h3>
+            <p class="product-description">{{product.description}}</p>
+            <div class="product-footer">
+              <span class="product-price">{{product.price}} TND</span>
+              <a [routerLink]="['/product', product.id]" class="btn btn-view">
+                Voir le produit
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,171 @@
+<div class="contact-page">
+  <div class="container my-5">
+    <div class="text-center mb-5">
+      <h1 class="page-title">
+        <i class="bi bi-envelope-heart"></i> Contactez-nous
+      </h1>
+      <p class="lead">Nous sommes à votre écoute pour toutes vos questions</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Formulaire de contact -->
+      <div class="col-lg-7">
+        <div class="contact-card">
+          <h2 class="section-title">
+            <i class="bi bi-chat-dots"></i> Envoyez-nous un message
+          </h2>
+
+          <form (ngSubmit)="onSubmit()">
+            <!-- Nom complet -->
+            <div class="mb-3">
+              <label class="form-label">Nom complet *</label>
+              <input 
+                type="text" 
+                class="form-control" 
+                [(ngModel)]="contactForm.fullName" 
+                name="fullName"
+                placeholder="Votre nom et prénom"
+                required>
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+              <label class="form-label">Email *</label>
+              <input 
+                type="email" 
+                class="form-control" 
+                [(ngModel)]="contactForm.email" 
+                name="email"
+                placeholder="votre@email.com"
+                required>
+            </div>
+
+            <!-- Sujet -->
+            <div class="mb-3">
+              <label class="form-label">Sujet</label>
+              <input 
+                type="text" 
+                class="form-control" 
+                [(ngModel)]="contactForm.subject" 
+                name="subject"
+                placeholder="Sujet de votre message">
+            </div>
+
+            <!-- Message -->
+            <div class="mb-3">
+              <label class="form-label">Message *</label>
+              <textarea 
+                class="form-control" 
+                [(ngModel)]="contactForm.message" 
+                name="message"
+                rows="6"
+                placeholder="Écrivez votre message ici..."
+                required></textarea>
+            </div>
+
+            <!-- Messages d'erreur et succès -->
+            <div class="alert alert-danger" *ngIf="errorMessage">
+              <i class="bi bi-exclamation-circle"></i> {{errorMessage}}
+            </div>
+
+            <div class="alert alert-success" *ngIf="successMessage">
+              <i class="bi bi-check-circle"></i> {{successMessage}}
+            </div>
+
+            <!-- Bouton d'envoi -->
+            <button 
+              type="submit" 
+              class="btn btn-submit w-100"
+              [disabled]="isLoading">
+              <span *ngIf="!isLoading">
+                <i class="bi bi-send"></i> Envoyer le message
+              </span>
+              <span *ngIf="isLoading">
+                <i class="bi bi-hourglass-split"></i> Envoi en cours...
+              </span>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Informations de contact -->
+      <div class="col-lg-5">
+        <div class="contact-card">
+          <h2 class="section-title">
+            <i class="bi bi-info-circle"></i> Nos coordonnées
+          </h2>
+
+          <div class="contact-info">
+            <!-- Email -->
+            <div class="info-item">
+              <i class="bi bi-envelope"></i>
+              <div>
+                <strong>Email</strong>
+                <p>{{'contact@lueurrose.com'}}</p>
+              </div>
+            </div>
+
+            <!-- Téléphone -->
+            <div class="info-item">
+              <i class="bi bi-telephone"></i>
+              <div>
+                <strong>Téléphone</strong>
+                <p>+216 54 894 142</p>
+              </div>
+            </div>
+
+            <!-- Adresse -->
+            <div class="info-item">
+              <i class="bi bi-geo-alt"></i>
+              <div>
+                <strong>Adresse</strong>
+                <p>Tunis, Tunisie</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Horaires d'ouverture -->
+          <div class="opening-hours mt-4">
+            <h3>
+              <i class="bi bi-clock"></i> Horaires d'ouverture
+            </h3>
+            <div class="hours-list">
+              <div class="hours-item">
+                <span>Lundi - Vendredi</span>
+                <strong>9h00 - 18h00</strong>
+              </div>
+              <div class="hours-item">
+                <span>Samedi</span>
+                <strong>10h00 - 16h00</strong>
+              </div>
+              <div class="hours-item">
+                <span>Dimanche</span>
+                <strong>Fermé</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Réseaux sociaux -->
+          <div class="social-links mt-4 text-center">
+            <h3 class="mb-3">Suivez-nous</h3>
+            <div class="d-flex justify-content-center gap-3">
+              <a href="#" class="social-icon">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="bi bi-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+---
+

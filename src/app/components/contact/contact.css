@@ -1,0 +1,136 @@
+.contact-page {
+  background: #f8f9fa;
+  min-height: calc(100vh - 80px);
+  padding: 3rem 0;
+}
+
+.page-title {
+  color: #e91e8c;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.page-title i {
+  font-size: 2.8rem;
+}
+
+.contact-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  height: 100%;
+}
+
+.section-title {
+  color: #e91e8c;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.section-title i {
+  margin-right: 0.5rem;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.form-control, .form-control:focus {
+  border: 2px solid #f0e5ea;
+  border-radius: 10px;
+  padding: 0.75rem;
+}
+
+.form-control:focus {
+  border-color: #e91e8c;
+  box-shadow: 0 0 0 0.2rem rgba(233, 30, 140, 0.15);
+}
+
+textarea.form-control {
+  resize: vertical;
+}
+
+.btn-submit {
+  background: linear-gradient(135deg, #e91e8c 0%, #ff69b4 100%);
+  border: none;
+  color: white;
+  padding: 0.85rem 2.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: transform 0.2s;
+}
+
+.btn-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(233, 30, 140, 0.3);
+}
+
+.contact-info {
+  margin-bottom: 2rem;
+}
+
+.info-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.info-item i {
+  font-size: 1.8rem;
+  color: #e91e8c;
+  flex-shrink: 0;
+}
+
+.info-item strong {
+  display: block;
+  color: #e91e8c;
+  margin-bottom: 0.3rem;
+}
+
+.info-item p {
+  margin: 0;
+  color: #666;
+}
+
+.opening-hours {
+  background: linear-gradient(135deg, #ffe0f0 0%, #ffd5e8 100%);
+  border-radius: 15px;
+  padding: 1.5rem;
+}
+
+.opening-hours h3 {
+  color: #e91e8c;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.hours-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 8px;
+}
+
+.hours-item span {
+  color: #666;
+}
+
+.hours-item strong {
+  color: #e91e8c;
+}

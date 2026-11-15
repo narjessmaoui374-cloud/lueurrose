@@ -1,0 +1,46 @@
+<div class="confirmation-page">
+  <div class="container">
+    <div class="confirmation-card">
+      <!-- Icône de succès -->
+      <div class="success-icon">
+        <i class="bi bi-check-circle-fill"></i>
+      </div>
+
+      <!-- Titre -->
+      <h1 class="confirmation-title">Commande confirmée !</h1>
+      
+      <p class="order-number">
+        Votre commande <strong>#{{orderId}}</strong> a été enregistrée avec succès.
+      </p>
+
+      <!-- Prochaines étapes -->
+      <div class="next-steps">
+        <h3><i class="bi bi-list-check"></i> Prochaines étapes :</h3>
+        <ul>
+          <li>
+            <i class="bi bi-telephone-check"></i>
+            <span>Vous recevrez un appel de confirmation</span>
+          </li>
+          <li>
+            <i class="bi bi-flower1"></i>
+            <span>Votre commande sera préparée avec soin</span>
+          </li>
+          <li>
+            <i class="bi bi-truck"></i>
+            <span>Livraison dans les 24-48h</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Boutons d'action -->
+      <div class="action-buttons">
+        <a routerLink="/" class="btn btn-primary">
+          <i class="bi bi-house"></i> Retour à l'accueil
+        </a>
+        <a routerLink="/contact" class="btn btn-outline-primary">
+          <i class="bi bi-envelope"></i> Nous contacter
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
